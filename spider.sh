@@ -78,6 +78,8 @@ function grab-link {
 	fi
 }
 
+option=0
+
 function grab {
 	if [ ! -d "$PREFIX/$2" ]; then
 		say "error: cannot grab links for $2 . $PREFIX/$2 does not exist"
@@ -145,8 +147,6 @@ if [ ! -f $LISTFILE ]; then
 	say "$LISTFILE not found. spider terminated"
 	exit
 fi
-
-option=0
 
 if [ "$1" == "-c" ]; then
 	option=1
